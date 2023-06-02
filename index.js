@@ -348,17 +348,23 @@
 // myLet();
 
 //DOM 
-const header = document.getElementById("fees");
-console.log(header);
-header.innerHTML = "haina k ho yesto!";
-header.style.background = "red";
-header.style.color = "white";
+// const header = document.getElementById("fees");
+// console.log(header);
+// header.innerHTML = "haina k ho yesto!";
+// header.style.background = "red";
+// header.style.color = "white";
 
-const func = document.getElementById("honey");
-func.style.color = "blue";
-func.style.background = "grey";
-console.log(func);
+// const func = document.getElementById("honey");
+// func.style.color = "blue";
+// func.style.background = "grey";
+// console.log(func);
 
 
-const real = document.getElementsByClassName("grey");
-real[0].innerHTML = "Bina dhewake free visa mili";
+// const real = document.getElementsByClassName("grey");
+// real[0].innerHTML = "Bina dhewake free visa mili";
+
+function myFunc(a,b){
+    return a*b;
+}
+const ans = myFunc(5,6);
+console.log(ans);
