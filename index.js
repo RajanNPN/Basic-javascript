@@ -363,8 +363,75 @@
 // const real = document.getElementsByClassName("grey");
 // real[0].innerHTML = "Bina dhewake free visa mili";
 
-function myFunc(a,b){
-    return a*b;
+// function myFunc(a,b){
+//     return a*b;
+// }
+// const ans = myFunc(5,6);
+// console.log(ans);
+
+// console.log(document.body);
+
+//dom manipulation
+
+
+//document :- it provide access to dom
+//method :- it help to provide access to element 
+
+
+const text = document.getElementById("hello1");
+// const text1 = document.getElementByClassName("class1");
+const mayor = document.getElementsByTagName("span");
+const btn = document.querySelectorAll("button");
+const clickBtn = document.querySelector("#click");
+clickBtn.onClick = ShowWhenClick;
+
+// console.log(clickBtn.getAttribute("id"));
+// clickBtn.setAttribute("class","meroClass");
+
+function ShowWhenClick(){
+    
+ const h1 = document.createElement("h1");
+ h1.innerHTML = "Nepal has adopted non-allignance foreign policy";
+ //append print the text in last line but prepend print the text in first line.
+ document.body.append(h1);
 }
-const ans = myFunc(5,6);
-console.log(ans);
+
+function deleteOnes(){
+    const h1 = document.querySelector("h1");
+    h1.remove();
+}
+ clickBtn.onclick = ShowWhenClick;
+ btn[1].onclick = deleteOnes;
+
+clickBtn.style.backgroundColor = "red";
+clickBtn.style.color = "black";
+clickBtn.style.border ="none";
+clickBtn.style.cursor ="pointer";
+clickBtn.style.padding ="10px";
+clickBtn.style.margin ="5px";
+
+ 
+btn[1].style.backgroundColor = "green";
+btn[1].style.color = "red";
+btn[1].style.border ="none";
+btn[1].style.cursor ="pointer";
+btn[1].style.padding ="10px";
+btn[1].style.margin ="5px";
+
+
+
+mayor[0].innerHTML = "harka rai";
+mayor[1].innerHTML = "balen shah";
+
+
+text1[0].innerHTMl = "<h2>i am good what about you</h2>";
+text1[0].style.backgroundcolor = "green";
+text1[0].style.color ="white";
+
+
+
+text.innerHTMl ="<h1>how is your day</h1>";
+text.style.backgroundcolor = "blue";
+text.style.color ="red";
+
+
