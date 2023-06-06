@@ -1,0 +1,15 @@
+.classForDiv{
+    width:100px;
+    height: 50px;
+    color:white;
+    background-color: black;
+    cursor: pointer;
+    margin:10px;
+
+}
+.classForBox{
+background-color: aliceblue;
+padding:10px;
+color:aqua;
+margin:5px;
+}

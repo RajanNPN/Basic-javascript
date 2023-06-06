@@ -347,7 +347,7 @@
     
 // myLet();
 
-//DOM 
+// DOM 
 // const header = document.getElementById("fees");
 // console.log(header);
 // header.innerHTML = "haina k ho yesto!";
@@ -371,67 +371,360 @@
 
 // console.log(document.body);
 
-//dom manipulation
+// dom manipulation
 
 
-//document :- it provide access to dom
-//method :- it help to provide access to element 
+// document :- it provide access to dom
+// method :- it help to provide access to element 
 
 
-const text = document.getElementById("hello1");
-// const text1 = document.getElementByClassName("class1");
-const mayor = document.getElementsByTagName("span");
-const btn = document.querySelectorAll("button");
-const clickBtn = document.querySelector("#click");
-clickBtn.onClick = ShowWhenClick;
+// const text = document.getElementById("hello1");
+// const text1 = document.getElementsByClassName("class1");
+// const mayor = document.getElementsByTagName("span");
+// const btn = document.querySelectorAll("button");
+// const clickBtn = document.querySelector("#click");
+// clickBtn.onClick = ShowWhenClick;
 
-// console.log(clickBtn.getAttribute("id"));
-// clickBtn.setAttribute("class","meroClass");
+// // console.log(clickBtn.getAttribute("id"));
+// // clickBtn.setAttribute("class","meroClass");
 
-function ShowWhenClick(){
+// function ShowWhenClick(){
     
- const h1 = document.createElement("h1");
- h1.innerHTML = "Nepal has adopted non-allignance foreign policy";
- //append print the text in last line but prepend print the text in first line.
- document.body.append(h1);
-}
+//  const h1 = document.createElement("h1");
+//  h1.innerHTML = "Nepal has adopted non-allignance foreign policy";
+//  //append print the text in last line but prepend print the text in first line.
+//  document.body.append(h1);
+// }
 
-function deleteOnes(){
-    const h1 = document.querySelector("h1");
-    h1.remove();
-}
- clickBtn.onclick = ShowWhenClick;
- btn[1].onclick = deleteOnes;
+// function deleteOnes(){
+//     const h1 = document.querySelector("h1");
+//     h1.remove();
+// }
+//  clickBtn.onclick = ShowWhenClick;
+//  btn[1].onclick = deleteOnes;
 
-clickBtn.style.backgroundColor = "red";
-clickBtn.style.color = "black";
-clickBtn.style.border ="none";
-clickBtn.style.cursor ="pointer";
-clickBtn.style.padding ="10px";
-clickBtn.style.margin ="5px";
+// clickBtn.style.backgroundColor = "red";
+// clickBtn.style.color = "black";
+// clickBtn.style.border ="none";
+// clickBtn.style.cursor ="pointer";
+// clickBtn.style.padding ="10px";
+// clickBtn.style.margin ="5px";
 
  
-btn[1].style.backgroundColor = "green";
-btn[1].style.color = "red";
-btn[1].style.border ="none";
-btn[1].style.cursor ="pointer";
-btn[1].style.padding ="10px";
-btn[1].style.margin ="5px";
+// btn[1].style.backgroundColor = "green";
+// btn[1].style.color = "red";
+// btn[1].style.border ="none";
+// btn[1].style.cursor ="pointer";
+// btn[1].style.padding ="10px";
+// btn[1].style.margin ="5px";
 
 
 
-mayor[0].innerHTML = "harka rai";
-mayor[1].innerHTML = "balen shah";
+// mayor[0].innerHTML = "harka rai";
+// mayor[1].innerHTML = "balen shah";
 
 
-text1[0].innerHTMl = "<h2>i am good what about you</h2>";
-text1[0].style.backgroundcolor = "green";
-text1[0].style.color ="white";
+// text1.innerHTMl = "i am good what about you?";
+// text1.style.background = "green";
+// text1.style.color ="white";
 
 
 
-text.innerHTMl ="<h1>how is your day</h1>";
-text.style.backgroundcolor = "blue";
-text.style.color ="red";
+// text.innerHTMl ="<h1>how is your day</h1>";
+// text.style.background = "blue";
+// text.style.color ="red";
 
 
+//Advance arrary method 
+
+
+     //fat arrary function
+// const arr = [1,2,3,4,5,6,7,8,9];
+// const myFunc=(value,index)=>{
+//  if(value===6){
+//     console.log("6 exist!");
+//  }
+
+//  };
+// arr.find(myFunc);
+
+
+
+// const arr = [1,2,3,4,5,6,7,8,9];
+// arr.find((value,index)=>{
+//      if(value===6){
+//         console.log("6 exist!");
+//       }
+//       });
+
+
+
+//find
+// const arr = [1,2,3,4,5,6,7,8,9];
+// arr.find((value,index)=>console.log(value,index));
+
+
+
+// const arr = [1,2,3,4,5,6,7,8,9];
+// const newArr = arr.find((value,index)=>value >5); // find :- it print only one number after five 
+// console.log(newArr);
+
+
+// const arr = [1,2,3,4,5,6,7,8,9];
+// const newArr = arr.filter((value,index)=> value >5); // filter :- it filter all the number greater than 5
+// console.log(newArr);
+
+
+// const arr = [1,2,3,4,5,6,7,8,9];
+// const newArr = arr.sort((a,b)=> a-b); // sort :- it the value small to high 
+// console.log(newArr);
+
+
+// const SubArr = [
+//     [1,2,3,4,5],
+//     [6,7,8,9,10],
+// ];
+// const newArr = SubArr.flat(); //flat:- it combine all the array to one 
+// console.log(newArr);
+
+
+//some
+// const arr = [1,2,3,4,5,6,7,8,9];
+// const result = arr.some((value,index)=> value > 6); // some :- it result true if 6 is exist (boollen value)
+// console.log(result);
+
+//every
+// const arr = [1,2,3,4,5,6,7,8,9];
+// const result = arr.every((value,index)=> value > 6); // every :- it 
+// console.log(result);
+
+//forEach :-it doesnot return new array (it doesnot display the updated value of array)
+// const arr = [1,2,3,4,5,6,7,8,9];
+// const result = arr.forEach((value,index)=> (value += 5));
+// console.log(result);
+// console.log(arr);
+
+//map :- it update the value (after adding 5 it return new array)
+// const arr = [1,2,3,4,5,6,7,8,9];
+// const result = arr.map((value,index)=> (value += 5));
+// console.log(result);
+// console.log(arr);
+
+
+//reduce
+// const arr = [1,2,3,4,5,6,7,8,9];
+// const result = arr.reduce(
+//    (prevValue,currentValue)=> prevValue+currentValue);
+// console.log(result);
+
+
+
+
+//onclick
+// const dance = document.getElementsByClassName("p2");
+
+// dance[0].innerHTML = "CAN YOU PLEASE!";
+
+// dance[0].style.backgroundColor ="black";
+// dance[0].style.color = "white";
+// dance[0].style.padding = "20px";
+
+// console.log(dance);
+
+
+//  dance[0].onclick = Showme;
+//  function Showme(){
+//     const h1 = document.createElement("h1");
+// h1.innerHTML = "play lazzy song";
+// document.body.prepend(h1);
+//  }
+//  function deleteOnes(){
+// const h5 = document.querySelector("h1");
+// h5.remove();
+//  }
+//  dance[1].onclick = deleteOnes;
+
+
+//Add event listener
+// const header = document.querySelector("#header");
+// const box = document.querySelector("#box");
+// const btn = document.querySelector("#listen");
+// const Input = document.querySelector("input");
+// Input.addEventListener("change",(e)=>{
+//      console.log(event.target.value);
+// });
+
+// btn.classList.add("classForDiv");
+
+// //add.eventlistener :- takes event and function
+// btn.addEventListener("click",()=>{
+//      // console.log("Clicked!");
+//      header.innerHTML ="pranchanda la india bata baishi layrw aayo!"
+//      Box.classList.add("classForBox");
+// });
+
+// btn.addEventListener("contextmenu",(e)=>{
+//      e.preventDefault();
+//      btn.style.backgroundColor="purple";
+// });
+
+// box.addEventListener("mouseover",()=>{
+//      header.style.backgroundColor="orange";
+//      header.style.Color="white";
+//      btn.style.transform="scale(1.3)";
+// });
+// box.addEventListener("mouseout",()=>{
+//      header.style.backgroundColor="";
+//      header.style.Color="";
+//      btn.style.transform="";
+//      // btn.style.filter="";
+// });
+
+// // window.addEventListener("contextmenu",(e)=>{
+// //      e.preventDefault();
+// //      btn.style.filter="blur(10px)";
+// // });
+// box.addEventListener("dblclick",()=>{
+//      document.body.style.backgroundColor="black";
+// });
+// box.addEventListener("click",()=>{
+//      document.body.style.backgroundColor="#fff";
+// });
+
+//Math Object
+// to generate a OTP code
+// const result =Math.round(4.5);
+// document.write(result);
+// console.log(result);
+
+// const result =Math.floor(4.5); //it return the floor value
+// document.write(result);
+// console.log(result);
+
+
+// const result = Math.ceil(4.5);//it return celling(greater value like 4.1 it return 5) value
+// document.write(result);
+// console.log(result);
+
+// const result =Math.trunc(4.5); // it remove and display first  digit (without decimal)
+// document.write(result);
+// console.log(result);
+
+// const result =Math.pow(4,2); // it display the sq.of digit
+// document.write(result);
+// console.log(result);
+
+
+
+// const result =Math.sqrt(16);
+// document.write(result);
+// console.log(result);
+
+
+// const result =Math.random(); // it generate random number
+// document.write(result);
+// console.log(result);
+
+
+// const result =Math.sin((90*Math.PI)/180);
+// document.write(result);
+// console.log(result);
+
+
+
+// const result =Math.tan((45*Math.PI)/180);
+// document.write(result);
+// console.log(result);
+// alert(result); // it display the result by sending msg like alert
+
+
+// const result =Math.log2(8); // it display result that 3 because three two are need to make 8
+// document.write(result);
+// console.log(result);
+
+// const result = new Date();
+// document.write(result.toISOString());
+// console.log(result.toISOString());
+
+// const result = new Date();
+// document.write(result.getDay());
+// console.log(result.getDay());
+
+
+// const result = new Date();
+// document.write(result.getDate());
+// console.log(result.getDate());
+
+// const result = new Date();
+// document.write(result.getFullYear());
+// console.log(result.getFullYear());   
+
+
+// const Input = document.querySelector("input");
+// const AddBtn = document.querySelector("#add");
+// const BtnLogout = document.querySelector("#clear");
+
+
+// const AddWebStorage = ()=>{
+//      sessionStorage.setItem("key",Input.value);
+
+// };
+// AddBtn.addEventListener("click",AddWebStorage);
+// BtnLogout.addEventListener("click",()=>{
+//      sessionStorage.clear();
+// });
+
+// if(sessionStorage.getItem("key")){
+//      alert(sessionStorage.getItem("key"));
+// }
+
+// AddBtn.addEventListener("click",AddWebStorage);
+// alert(sessionStorage.getItem("key"));
+
+
+// const Input = document.querySelector("input");
+// const AddBtn = document.querySelector("#add");
+// const BtnLogout = document.querySelector("#clear");
+
+
+// const AddWebStorage = ()=>{
+//      localStorage.setItem("key",Input.value);
+
+// };
+// AddBtn.addEventListener("click",AddWebStorage);
+// BtnLogout.addEventListener("click",()=>{
+//      localStorage.clear();
+// });
+
+// if(localStorage.getItem("key")){
+//      alert(localStorage.getItem("key"));
+// }
+
+
+const Input = document.querySelector("input");
+const AddBtn = document.querySelector("#add");
+const BtnLogout = document.querySelector("#clear");
+
+
+const AddWebStorage = ()=>{
+     localStorage.setItem("key",
+     JSON.stringify({
+          name:"rajan",
+          age:21,
+          gender:"male",
+          isMarried: false,
+
+     })
+        
+     );
+
+};
+AddBtn.addEventListener("click",AddWebStorage);
+BtnLogout.addEventListener("click",()=>{
+     localStorage.clear();
+});
+
+if(localStorage.getItem("key")){
+     // alert(localStorage.getItem("key"));
+     console.log(JSON.parse(localStorage.getItem("key")));
+}
