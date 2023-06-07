@@ -701,30 +701,31 @@
 // }
 
 
-const Input = document.querySelector("input");
-const AddBtn = document.querySelector("#add");
-const BtnLogout = document.querySelector("#clear");
+
+// const Input = document.querySelector("input");
+// const AddBtn = document.querySelector("#add");
+// const BtnLogout = document.querySelector("#clear");
 
 
-const AddWebStorage = ()=>{
-     localStorage.setItem("key",
-     JSON.stringify({
-          name:"rajan",
-          age:21,
-          gender:"male",
-          isMarried: false,
+// const AddWebStorage = ()=>{
+//      localStorage.setItem("key",
+//      JSON.stringify({
+//           name:"rajan",
+//           age:21,
+//           gender:"male",
+//           isMarried: false,
 
-     })
+//      })
         
-     );
+//      );
 
-};
-AddBtn.addEventListener("click",AddWebStorage);
-BtnLogout.addEventListener("click",()=>{
-     localStorage.clear();
-});
+// };
+// AddBtn.addEventListener("click",AddWebStorage);
+// BtnLogout.addEventListener("click",()=>{
+//      localStorage.clear();
+// });
 
-if(localStorage.getItem("key")){
-     // alert(localStorage.getItem("key"));
-     console.log(JSON.parse(localStorage.getItem("key")));
-}
+// if(localStorage.getItem("key")){
+//      // alert(localStorage.getItem("key"));
+//      console.log(JSON.parse(localStorage.getItem("key")));
+// }
