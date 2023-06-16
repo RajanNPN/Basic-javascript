@@ -1149,47 +1149,53 @@ const weatherField = document.querySelector(".weather3 span");
 const form = document.querySelector("form");
 const input = document.querySelector(".searchField");
 
-let target = "kathmandu";
-const fetchedData = async (target) => {
- try {
-     const res = await fetch(
-          (URL = `https://api.weatherapi.com/v1/current.json?key=e3df55e51fa84e8a8eb92138231406&q=${target}`)
-        );
-        const data = await res.json();
-        console.log(data);
-      
-        const {
-          current: {
-            temp_c,
-            condition: { icon, text },
-          },
-          location: { name, localtime },
-        } = data; // concept of d structure.
-      
-        temperatureField.innerHTML = `${temp_c}&deg;c`;
-        cityField.innerHTML = name;
-        emojiField.src = icon;
-        weatherField.innerHTML = text;
-      
-        const exactTime = localtime.split(" ")[1];
-        const exactDate = localtime.split(" ")[0];
-      
-        const currentDate = new Date();
-        const currentDay = getTodayDay(currentDate.getDay());
-        dateField.innerText = `${exactTime} -${currentDay} ${exactDate}`;
- } catch (error) {
-     alert("location not found");
- }
+let target = "Kathmandu";
+const fetchedData = async(target) => {
+
+   try {
+    const res = await fetch(
+      `https://api.weatherapi.com/v1/current.json?key=e3df55e51fa84e8a8eb92138231406&q=${target}`
+    );
+    const data = await res.json();
+    console.log(data);
+
+    const {
+      current: {
+        temp_c,
+        condition: { icon, text },
+      },
+      location: { name, localtime },
+    } = data; // concept of d structure.
+
+    temperatureField.innerHTML = `${temp_c}&deg;C`
+    cityField.innerHTML = name;
+    emojiField.src = icon;
+    weatherField.innerHTML = text;
+
+    const exactTime = localtime.split(" ")[1];
+    const exactDate = localtime.split(" ")[0];
+ 
+
+    const currentDate = new Date();
+    const currentDay = getTodayDay(currentDate.getDay());
+    dateField.innerText = `${exactTime} -${currentDay} ${exactDate}`;
+    
+   } catch (error) {
+    alert("Location not found!")
+    
+   }
 };
 fetchedData(target);
 
-form.addEventListener("submit",(e)=>{
-   if(!input.value){
-     alert("Field must be filled!");
-   }else{
-     target = input.Value;
-   }
-})
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  if (input.value.trim() === "") {
+    alert("Field must be filled!");
+  } else {
+    target = input.value;
+    fetchedData(target);
+  }
+});
 
 function getTodayDay(num) {
   switch (num) {
