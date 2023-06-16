@@ -42,7 +42,7 @@ function showAllTasks(){
 
             tasks.splice(index,1);
 
-    localStorage.setItem("tasks",JSON.stringify(tasks));
+    localStorage.setItem("tasks",JSON.stringify(tasks));// object into string ; parse:- string into object;5
 
             console.log(tasks);
             showAllTasks();
@@ -64,7 +64,7 @@ function removeTasks(){
 }
 
 form.addEventListener("submit",(e)=>{
-    e.preventDefault();
+     e.preventDefault();
 
     removeTasks();
 
@@ -104,10 +104,12 @@ form.addEventListener("submit",(e)=>{
 //     clearTimeout(clearId); //clearInterval
 // });
 
-const clearId = setInterval(()=>{
-const now = new Date()
-console.log(now.toLocaleTimeString());
-},1000);
-setTimeout(()=>{
-    clearInterval(clearId);
-},5000);
+// const clearId = setInterval(()=>{
+// const now = new Date()
+// console.log(now.toLocaleTimeString());
+// },1000);
+// setTimeout(()=>{
+//     clearInterval(clearId);
+// },5000);
+
+//
